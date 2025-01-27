@@ -2,14 +2,28 @@ POST http://localhost:3000/reports
 Content-Type: application/json
 
 {
-    "make": "Toyota",
-    "model": "Corolla",
-    "year": 1980,
-    "mileage": 100000,
+    "make": "Ford",
+    "model": "Everest",
+    "year": 2023,
+    "mileage": 40000,
     "lng": -122.084,
     "lat": 37.422,
-    "price": 2000
+    "price": 88000
 }
 
 ### Get all reports
 GET http://localhost:3000/reports
+
+### Get an estimate for existing vehicle
+GET http://localhost:3000/reports/estimate?make=Ford&model=Everest&year=2023&mileage=40000&lng=-122.084&lat=37.422&price=88000
+
+### Approve an existing report
+Patch http://localhost:3000/reports/1
+Content-Type: application/json
+
+{
+    "approved": true
+}
+
+### Get report by Id
+DELETE http://localhost:3000/reports/4
