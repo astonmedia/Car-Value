@@ -1,0 +1,15 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 1980,
+    "mileage": 100000,
+    "lng": -122.084,
+    "lat": 37.422,
+    "price": 2000
+}
+
+### Get all reports
+GET http://localhost:3000/reports
